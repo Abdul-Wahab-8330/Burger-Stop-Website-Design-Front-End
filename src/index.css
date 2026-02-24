@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ============================================
+   BURGER STOP — GLOBAL STYLES & THEME
+   ============================================ */
+
+@theme {
+  /* --- Font Families --- */
+  --font-spatial-black: 'Archivo Black', sans-serif;
+  --font-compact-medium: 'Abel', sans-serif;
+  --font-medium: 'Host Grotesk', sans-serif;
+  --font-compact-black: 'Archivo Narrow', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  /* --- Brand Colors --- */
+  --color-primary: #00B4C5;
+  --color-secondary: #1E1E1C;
+  --color-white: #FFFFFF;
+
+  /* Primary with opacity variants (used on hero slider overlay etc.) */
+  --color-primary-10: rgba(0, 180, 197, 0.10);
+  --color-primary-20: rgba(0, 180, 197, 0.20);
+  --color-primary-40: rgba(0, 180, 197, 0.40);
+}
+
+
+
+body {
+  font-family: 'Host Grotesk', sans-serif;
+  background-color: #FFFFFF;
+  color: #1E1E1C;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --- Scrollbar (optional, matches dark theme) --- */
+::-webkit-scrollbar {
+  width: 2px;
+  /* none */
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00B4C5;
+  border-radius: 10px;
+}
+
+.slider-panel-hide-tablet { display: none; }
+.slider-panel-hide-mobile { display: none; }
+
+@media (min-width: 768px) {
+  .slider-panel-hide-tablet { display: block; }
+}
+
+@media (min-width: 1024px) {
+  .slider-panel-hide-mobile { display: block; }
+}
