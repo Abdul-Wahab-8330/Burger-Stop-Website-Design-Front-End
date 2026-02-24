@@ -9,7 +9,7 @@ import clickCollect from "../assets/click-collect-logo.png";
 export default function OrderOnlineBar() {
   return (
   <section 
-    className="w-full bg-secondary flex flex-col md:flex-row items-center justify-center md:justify-between px-6 py-12 md:py-20 md:px-12 lg:px-20 gap-6 md:gap-0" 
+    className="w-full bg-secondary flex flex-col lg:flex-row items-center justify-center md:justify-between px-6 py-12 md:py-20 md:px-12 lg:px-20 gap-6 md:gap-4" 
     style={{ minHeight: "200px", height: "auto" }} // Auto height for mobile wrapping
   >
     
@@ -42,14 +42,14 @@ export default function OrderOnlineBar() {
 
     {/* RIGHT — Logos */}
     <div className="flex items-center justify-center gap-8 md:gap-10 lg:gap-14">
-      <a href="https://ubereats.com" target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
+      <a  target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
         <img 
           src={uberEats} 
           alt="UberEats" 
           className="object-contain h-7 sm:h-8 md:h-10 lg:h-11" 
         />
       </a>
-      <a href="#" className="transition-transform active:scale-95">
+      <a  className="transition-transform active:scale-95">
         <img 
           src={clickCollect} 
           alt="Click + Collect" 

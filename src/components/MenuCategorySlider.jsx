@@ -91,7 +91,7 @@ export default function MenuCategorySlider() {
                         aria-label="Scroll left"
                         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center bg-transparent transition-all "
                     >
-                        <ChevronUp size={40} color="#ffffff" strokeWidth={1} style={{ transform: "rotate(-90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
+                        <ChevronUp size={40} color="#ffffff" strokeWidth={2} style={{ transform: "rotate(-90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
                     </button>
                 )}
 
@@ -104,18 +104,18 @@ export default function MenuCategorySlider() {
                     {filtered.length > 0 ? filtered.map((item) => (
                         <div
                             key={item.id}
-                            className="shrink-0 overflow-hidden cursor-pointer group transition-transform hover:scale-[1.02] py-5 px-4"
+                            className="shrink-0 overflow-hidden cursor-pointer group transition-transform hover:scale-[1.02] md:py-5 py-2 px-4"
                             style={{ width: "320px", borderRadius: "6px", backgroundColor: "#00B4C5" }}
                         >
                             {/* Burger Image */}
-                            <div className="w-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300" style={{ height: "280px" }}>
+                            <div className="w-full flex items-center md:mb-0 -mb-4 justify-center group-hover:scale-105 transition-transform duration-300" style={{ height: "280px" }}>
                                 <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                             </div>
 
                             {/* Name */}
                             <div className="px-4 py-5">
                                 <p
-                                    className="font-spatial-black text-white uppercase leading-9.5 tracking-tight text-center group-hover:tracking-wide transition-all "
+                                    className="font-spatial-black text-white uppercase leading-10 tracking-tight text-center group-hover:tracking-wide transition-all "
                                     style={{ fontSize: "50px", whiteSpace: "pre-line", transform: 'scaleY(0.9)', }}
                                 >
                                     {item.name}
@@ -143,7 +143,7 @@ export default function MenuCategorySlider() {
                         aria-label="Scroll right"
                         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center bg-transparent transition-all "
                     >
-                        <ChevronUp size={40} color="#ffffff" strokeWidth={1}  style={{ transform: "rotate(90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
+                        <ChevronUp size={40} color="#ffffff" strokeWidth={2}  style={{ transform: "rotate(90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
                     </button>
                 )}
 

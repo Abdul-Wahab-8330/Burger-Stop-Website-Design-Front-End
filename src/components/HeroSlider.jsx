@@ -48,13 +48,13 @@ export default function HeroSlider() {
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                 >
                   {/* Image */}
-                  <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full object-cover" style={{ filter: !isOverlay ? "brightness(0.8) contrast(1.2) saturate(1.2)" : "none" }} />
+                  <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
 
                   {/* Teal overlay */}
                   {isOverlay && <div className="absolute inset-0" style={{ backgroundColor: "#00B4C5", mixBlendMode: "multiply" }} />}
 
                   {/* Dark overlay for solid */}
-                  {!isOverlay && <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%)", mixBlendMode: "multiply", backdropFilter: "contrast(1.1) brightness(0.9)" }} />}
+                  {!isOverlay && <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)", mixBlendMode: "multiply" }} />}
 
                   {/* Text */}
                   <div className="absolute inset-0 flex flex-col items-start left-0 justify-end gap-2 pb-9">
