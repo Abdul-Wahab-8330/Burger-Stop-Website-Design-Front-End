@@ -33,7 +33,7 @@ export default function PremiumAngusSection() {
 
                     {/* Heading - Mix of Host Grotesk Medium and Spatial Black */}
                     <div className="flex flex-col leading-none">
-                        <h2 className="font-spatial-black text-white uppercase leading-none text-[20px] md:text-[40px] xl:text-[72px] 2xl:text-[82px] tracking-tighter font-bold" style={{transform:'scaleY(0.9'}}>
+                        <h2 className="font-spatial-black text-white uppercase leading-none text-[20px] md:text-[40px] xl:text-[68px] 2xl:text-[82px] tracking-tighter font-bold" style={{transform:'scaleY(0.9'}}>
                             100% PREMIUM
                         </h2>
                         <h2 className="font-medium text-white uppercase italic leading-none tracking-tight text-[30px] md:text-[60px] xl:text-[100px] 2xl:text-[110px] font-bold" style={{transform:'scaleY(1.1)'}}>
