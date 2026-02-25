@@ -85,7 +85,7 @@ export default function LocationsSection() {
         <section className="w-full bg-white pt-4 md:py-8 py-4">
 
             {/* Heading */}
-            <div className="px-5 md:px-7 lg:px-9 mb-2">
+            <div className="px-5 md:px-7 lg:px-9 mb-2 mt-3">
                 <h2 className="font-compact-medium font-extrabold text-secondary uppercase text-3xl md:text-4xl lg:text-5xl">
                     LOCATIONS TO{" "}
                     <span className="font-spatial-black text-3xl md:text-4xl lg:text-5xl">REFUEL</span>
@@ -109,7 +109,7 @@ export default function LocationsSection() {
                 {/* Scrollable Cards */}
                 <div
                     ref={scrollRef}
-                    className="flex overflow-x-auto gap-3 px-3 md:px-5 lg:px-7"
+                    className="flex overflow-x-auto gap-3 px-2 pb-3 md:px-5 lg:px-7"
                     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                     {locations.map((loc) => (
@@ -143,7 +143,7 @@ function LocationCard({ location }) {
         <Link>
             <div
                 className="relative shrink-0 overflow-hidden cursor-pointer group"
-                style={{ width: "400px", height: "500px", borderRadius: "5px" }}
+                style={{ width: "400px", height: "490px", borderRadius: "5px" }}
             >
                 {/* Background Image */}
                 <img

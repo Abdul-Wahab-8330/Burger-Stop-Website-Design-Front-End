@@ -20,10 +20,11 @@ export default function HeroSlider() {
   const prev = () => { setDirection(-1); setIndex((i) => (i - 1 + total) % total); };
   const next = () => { setDirection(1);  setIndex((i) => (i + 1) % total); };
 
+  
   const getSlide = (offset) => slides[(index + offset + total) % total];
 
   return (
-    <section className="relative w-full bg-white overflow-hidden z-0" style={{ height: "875px" }}>
+    <section className="relative w-full bg-white overflow-hidden z-0 h-[100vh] md:h-[875px]">
       <div className="flex w-full h-full" style={{ gap: "14px", padding: "14px" }}>
         {[0, 1, 2].map((offset) => {
           const slide = getSlide(offset);
@@ -31,7 +32,7 @@ export default function HeroSlider() {
           return (
             <div
               key={offset}
-              className={`relative flex-1 h-full overflow-hidden
+              className={`relative flex-1 h-full group overflow-hidden
                 ${offset === 1 ? "slider-panel-hide-tablet" : ""}
                 ${offset === 2 ? "slider-panel-hide-mobile" : ""}
               `}
@@ -48,7 +49,7 @@ export default function HeroSlider() {
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                 >
                   {/* Image */}
-                  <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
+                  <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-all duration-300 object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
 
                   {/* Teal overlay */}
                   {isOverlay && <div className="absolute inset-0" style={{ backgroundColor: "#00B4C5", mixBlendMode: "multiply" }} />}
@@ -58,7 +59,7 @@ export default function HeroSlider() {
 
                   {/* Text */}
                   <div className="absolute inset-0 flex flex-col items-start left-0 justify-end gap-2 pb-9">
-                    <span className="font-spatial-black uppercase text-center" style={{ fontSize: isOverlay ? "84px" : "120px", letterSpacing: "2px", color: isOverlay ? "transparent" : "#ffffff", WebkitTextStroke: isOverlay ? "2px #ffffff" : "4px #ffffff", textAlign: "left", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
+                    <span className="font-spatial-black cursor-pointer uppercase text-center" style={{ fontSize: isOverlay ? "84px" : "120px", letterSpacing: "2px", color: isOverlay ? "transparent" : "#ffffff", WebkitTextStroke: isOverlay ? "2px #ffffff" : "4px #ffffff", textAlign: "left", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
                       {slide.text}
                     </span>
                     {/* {slide.subtext && (
