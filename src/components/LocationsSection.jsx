@@ -23,6 +23,7 @@ const locations = [
         image: location1,
         name: "SALE",
         type: "normal",
+        isMobileSpecial: true,
         comingSoon: false,
         slug: "sale", // for linking to individual location page in future
     },
@@ -136,6 +137,7 @@ export default function LocationsSection() {
 
 function LocationCard({ location }) {
     const isSpecial = location.type === "special";
+    const isMobileSpecial = location.isMobileSpecial;
 
     return (
         <Link>
@@ -156,9 +158,43 @@ function LocationCard({ location }) {
                     style={{ backgroundColor: "#00B4C5", mixBlendMode: "multiply" }}
                 />
 
+                {isMobileSpecial && (
+                    <div className=" md:hidden absolute top-6 right-6 flex items-center justify-center">
+                        <div
+                            className="border-8 border-primary bg-secondary px-4 py-3 text-center "
+                            style={{ borderRadius: "16px" }}
+                        >
+                            <p
+                                className="font-spatial-black text-primary uppercase -my-2 leading-tight"
+                                style={{ fontSize: "40px", letterSpacing: "1px" }}
+                            >
+                                LETS
+                            </p>
+                            <p
+                                className="font-spatial-black text-white uppercase -my-4 leading-tight"
+                                style={{ fontSize: "55px", letterSpacing: "2px" }}
+                            >
+                                GO!
+                            </p>
+                            <p
+                                className="font-spatial-black text-white uppercase leading-tight -my-4"
+                                style={{ fontSize: "55px", letterSpacing: "2px" }}
+                            >
+                                GO!
+                            </p>
+                            <p
+                                className="font-spatial-black text-white uppercase -my-4 leading-tight"
+                                style={{ fontSize: "55px", letterSpacing: "2px" }}
+                            >
+                                GO!
+                            </p>
+                        </div>
+                    </div>
+                )}
+
                 {/* Special card — LETS GO! GO! GO! box center */}
                 {isSpecial && (
-                    <div className="absolute top-6 right-6 flex items-center justify-center">
+                    <div className="hidden md:flex absolute top-6 right-6 items-center justify-center">
                         <div
                             className="border-8 border-primary bg-secondary px-4 py-3 text-center "
                             style={{ borderRadius: "16px" }}
@@ -199,7 +235,7 @@ function LocationCard({ location }) {
                     <span
                         className="font-spatial-black text-white uppercase leading-none"
                         style={{
-                            fontSize: "42px",
+                            fontSize: "51px",
                             letterSpacing: "0px",
                             writingMode: "vertical-rl",
                             transform: "rotate(180deg) scaleY(0.9)",

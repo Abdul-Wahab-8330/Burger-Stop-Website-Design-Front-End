@@ -22,10 +22,10 @@ export default function TurboChargedSection() {
   };
 
   return (
-    <section className="w-full bg-primary px-5 pt-1 pb-8">
+    <section className="w-full bg-primary md:px-5 px-2 pt-1 pb-8">
 
       {/* Top — Text + Clock */}
-      <div className="w-full flex items-start justify-between px-3 pt-9 pb-5 md:px-3 lg:px-3 lg:pt-12">
+      <div className="w-full flex items-start justify-between px-0.5 pt-9 pb-5 md:px-1 lg:px-1 lg:pt-12">
 
         {/* Left — Heading */}
         <div className="flex flex-col max-w-full">
@@ -37,7 +37,7 @@ export default function TurboChargedSection() {
             TURBO
           </h2>
           <h2
-            className="font-spatial-black text-white xl:text-[166px] md:text-[100px] text-[45px] uppercase leading-none tracking-tight lg:-mt-5 lg:-mb-3 -mt-1"
+            className="font-spatial-black text-white xl:text-[166px] md:text-[100px] text-[43px] uppercase leading-none tracking-tight lg:-mt-5 lg:-mb-3 -mt-1"
             style={{ transform: 'scaleY(0.9)', WebkitTextStroke: "0px #ffffff" }}
           >
             CHARGED
@@ -56,7 +56,7 @@ export default function TurboChargedSection() {
           <img
             src={clockImage}
             alt="Turbo Refuel Badge"
-            className="w-25 h-25 md:w-35 md:h-35 lg:w-52 lg:h-52 object-contain"
+            className="w-24 h-24 md:w-35 md:h-35 lg:w-52 lg:h-52 object-contain"
           />
         </div>
 

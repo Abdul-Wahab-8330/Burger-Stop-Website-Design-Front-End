@@ -17,20 +17,20 @@ export default function FreshHotSection() {
                 className="absolute inset-0 bg-primary z-10"
                 style={{ clipPath: "polygon(0 0, 48% 0, 69% 100%, 0 100%)" }}
             />
-            <div className="flex items-center w-full h-full relative px-5 py-12 md:px-10 lg:px-14.5" >
+            <div className="flex items-center w-full h-full relative px-2 py-12 md:px-7 lg:px-12" >
 
                 {/* LEFT — Text Content */}
                 <div className="flex flex-col md:gap-3 lg:gap-3 gap-3 z-10 max-w-[60%] md:max-w-[50%] lg:max-w-[50%]">
 
                     {/* Heading */}
                     <div className="flex flex-col leading-none">
-                        <h2 className="font-medium text-white uppercase italic leading-none tracking-tight text-[28px] md:text-[60px] xl:text-[95px]">
+                        <h2 className="font-medium text-white uppercase italic leading-none tracking-tight text-[27px] md:text-[60px] xl:text-[95px]">
                             FRESH, HOT,
                         </h2>
-                        <h2 className="font-spatial-black text-white uppercase leading-none tracking-tight text-[33px] md:text-[70px] xl:text-[110px]">
+                        <h2 className="font-spatial-black text-white uppercase leading-none tracking-tight text-[32px] md:text-[70px] xl:text-[110px]">
                             &amp; FULL OF
                         </h2>
-                        <h2 className="font-spatial-black text-white uppercase leading-none tracking-tight text-[33px] md:text-[70px] xl:text-[110px]">
+                        <h2 className="font-spatial-black text-white uppercase leading-none tracking-tight text-[32px] md:text-[70px] xl:text-[110px]">
                             FLAVOUR
                         </h2>
                     </div>

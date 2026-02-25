@@ -45,7 +45,7 @@ const Navbar = ({ transparent }) => {
 
   return (
     <nav className="w-full absolute top-0 left-0 z-50">
-      <div className="w-full flex items-center justify-between mt-13 md:px-18 px-14 py-7">
+      <div className="w-full flex items-center justify-between md:mt-13 mt-8 md:px-18 px-8 py-7">
 
         {/* LEFT — Social Icons */}
         <div className="flex items-center md:gap-4 gap-2">

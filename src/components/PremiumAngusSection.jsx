@@ -58,7 +58,7 @@ export default function PremiumAngusSection() {
                 </div>
 
                 {/* TURBO CHARGED Badge — Floating near the center overlap */}
-                <div className="absolute top-[50%] left-[26%] md:left-[33%]  transform -translate-y-1/2 z-30">
+                <div className="absolute top-[50%] left-[23%] md:left-[33%] transform -translate-y-1/2 z-30">
                     <img
                         src={turboChargedBadge}
                         alt="Turbo Charged Delivery"

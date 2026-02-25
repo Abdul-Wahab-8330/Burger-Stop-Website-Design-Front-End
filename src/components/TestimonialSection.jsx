@@ -49,7 +49,7 @@ export default function TestimonialSection() {
   const current = reviews[index];
 
   return (
-    <section className="w-full bg-white pt-10 pb-5 md:pt-12 px-6 md:px-20 lg:px-[120px] overflow-hidden">
+    <section className="w-full bg-white pt-15 pb-12 md:pt-17 px-6 md:px-20 lg:px-30 overflow-hidden">
       <div className="max-w-7xl mx-auto pb-2">
         
         {/* TOP ROW: Stars and Navigation */}

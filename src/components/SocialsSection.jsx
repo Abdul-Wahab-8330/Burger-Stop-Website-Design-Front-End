@@ -23,7 +23,7 @@ export default function SocialsSection() {
   };
 
   return (
-    <section className="w-full bg-white pt-1 pb-12 px-6 md:px-9 lg:px-12">
+    <section className="w-full bg-white pt-1 pb-14 px-3 md:px-6 lg:px-9">
       <div className="w-full mx-auto flex flex-col md:flex-row gap-6 lg:gap-8 items-stretch">
         
         {/* Vertical Title - Desktop */}
@@ -40,10 +40,10 @@ export default function SocialsSection() {
         <div className="flex md:hidden -mb-4 w-full justify-between items-center">
           <h2 className="font-spatial-black text-secondary text-3xl lg:text-4xl uppercase">Socials</h2>
           <div className="flex gap-2">
-            <button onClick={() => scroll("left")} className="p-1 border border-0.5 rounded-full text-primary border-primary ">
+            <button onClick={() => scroll("left")} className="p-1 border border-0.5 rounded-full text-secondary border-secondary ">
               <ChevronLeft size={20} />
             </button>
-            <button onClick={() => scroll("right")} className="p-1 border border-0.5 rounded-full text-primary border-primary">
+            <button onClick={() => scroll("right")} className="p-1 border border-0.5 rounded-full text-secondary border-secondary">
               <ChevronRight size={20} />
             </button>
           </div>
@@ -60,7 +60,7 @@ export default function SocialsSection() {
               className="
                 shrink-0 snap-center
                 /* Mobile: Show 2 images (each 50% minus half the gap) */
-                w-[calc(40%-8px)] 
+                w-[calc(45%-8px)] 
                 /* Tablet: Show 2 images clearly */
                 md:w-[calc(40%-8px)] 
                 /* Large PC: Show all 4 perfectly */
