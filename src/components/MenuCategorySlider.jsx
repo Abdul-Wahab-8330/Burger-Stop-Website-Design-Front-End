@@ -56,16 +56,16 @@ export default function MenuCategorySlider() {
     const filtered = menuItems.filter((item) => item.category === activeCategory);
 
     return (
-        <section className="w-full bg-white py-6 px-2 md:px-5 lg:px-6">
+        <section className="w-full bg-white py-6 px-2 md:px-4 lg:px-5">
 
             {/* Top Row — Categories left, View Menu right */}
-            <div className="flex items-center justify-between mb-6 overflow-x-auto scrollbar-hide px-1">
-                <div className="flex items-center gap-4 md:gap-6 flex-nowrap ">
+            <div className="flex items-center justify-between mb-5 overflow-x-auto scrollbar-hide px-1">
+                <div className="flex items-center gap-4 md:gap-4 flex-nowrap ">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
-                            className="font-compact-black text-lg md:text-xl whitespace-nowrap transition-colors scrollbar-hide"
+                            className="font-compact-black text-md md:text-lg whitespace-nowrap transition-colors scrollbar-hide"
                             style={{ color: activeCategory === cat ? "#00B4C5" : "#1E1E1C" }}
                         >
                             {cat}
@@ -74,7 +74,7 @@ export default function MenuCategorySlider() {
                 </div>
                 <a
 
-                    className="font-compact-black cursor-pointer text-md md:text-xl tracking-normal whitespace-nowrap ml-6 transition-opacity hover:opacity-70"
+                    className="font-compact-black cursor-pointer text-md md:text-lg tracking-normal whitespace-nowrap ml-6 transition-opacity hover:opacity-70"
                     style={{ color: "#00B4C5" }}
                 >
                     VIEW OUR MENU
@@ -91,7 +91,7 @@ export default function MenuCategorySlider() {
                         aria-label="Scroll left"
                         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center bg-transparent transition-all "
                     >
-                        <ChevronUp size={40} color="#ffffff" strokeWidth={2} style={{ transform: "rotate(-90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
+                        <ChevronUp size={40} color="#ffffff" strokeWidth={2} style={{ transform: "rotate(-90deg)", borderRadius: "50%" }} />
                     </button>
                 )}
 
@@ -104,7 +104,7 @@ export default function MenuCategorySlider() {
                     {filtered.length > 0 ? filtered.map((item) => (
                         <div
                             key={item.id}
-                            className="shrink-0 overflow-hidden cursor-pointer group transition-transform hover:scale-[1.02] md:py-5 py-2 px-4"
+                            className="shrink-0 overflow-hidden cursor-pointer group transition-transform hover:scale-[1.02] md:py-2 py-0 px-4"
                             style={{ width: "320px", borderRadius: "6px", backgroundColor: "#00B4C5" }}
                         >
                             {/* Burger Image */}
@@ -113,7 +113,7 @@ export default function MenuCategorySlider() {
                             </div>
 
                             {/* Name */}
-                            <div className="px-4 py-5">
+                            <div className="px-4 py-4">
                                 <p
                                     className="font-spatial-black text-white uppercase leading-10 tracking-tight text-center group-hover:tracking-wide transition-all "
                                     style={{ fontSize: "50px", whiteSpace: "pre-line", transform: 'scaleY(0.9)', }}
@@ -143,7 +143,7 @@ export default function MenuCategorySlider() {
                         aria-label="Scroll right"
                         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-14 h-14 flex items-center justify-center bg-transparent transition-all "
                     >
-                        <ChevronUp size={40} color="#ffffff" strokeWidth={2}  style={{ transform: "rotate(90deg)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)", borderRadius: "50%" }} />
+                        <ChevronUp size={40} color="#ffffff" strokeWidth={2}  style={{ transform: "rotate(90deg)", borderRadius: "50%" }} />
                     </button>
                 )}
 

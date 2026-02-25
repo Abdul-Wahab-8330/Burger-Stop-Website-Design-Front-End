@@ -49,8 +49,8 @@ export default function TestimonialSection() {
   const current = reviews[index];
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 px-6 md:px-20 lg:px-[120px] overflow-hidden">
-      <div className="max-w-7xl mx-auto border-b border-gray-100 pb-4">
+    <section className="w-full bg-white pt-10 pb-5 md:pt-12 px-6 md:px-20 lg:px-[120px] overflow-hidden">
+      <div className="max-w-7xl mx-auto pb-2">
         
         {/* TOP ROW: Stars and Navigation */}
         <div className="flex justify-between items-center mb-6">
@@ -97,7 +97,7 @@ export default function TestimonialSection() {
                   {current.name.charAt(0)}
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-md font-inter text-secondary">
+                  <span className="font-bold text-md font-inter text-secondary">
                     {current.name}
                   </span>
                   <span className="text-gray-900 font-bold text-md font-inter">|</span>
@@ -108,7 +108,7 @@ export default function TestimonialSection() {
               </div>
 
               {/* Review Text */}
-              <p className="font-medium  text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl">
+              <p className="font-inter text-gray-600 text-base md:text-lg font-semibold leading-relaxed max-w-3xl">
                 {current.text}
               </p>
             </motion.div>

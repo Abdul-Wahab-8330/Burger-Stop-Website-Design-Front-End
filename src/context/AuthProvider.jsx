@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
     const isPublicRoute = location.pathname === '/public-report';
 
     if (loading && !isPublicRoute) {
-        return <div className='flex h-screen justify-center items-center text-gray-600 text-2xl'><img className='w-9 mr-4 ' src={loader} alt="" /> Loading</div>; // ✅ avoids blank login page
+        return <div className='flex h-screen justify-center bg-linear-to-b from-secondary to-white font-bold items-center text-gray-900 text-2xl'><img className='w-9 mr-4 ' src={loader} alt="" /> Loading...</div>; // ✅ avoids blank login page
     }
 
 

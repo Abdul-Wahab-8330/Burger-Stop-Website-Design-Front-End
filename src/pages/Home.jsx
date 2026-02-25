@@ -1,9 +1,12 @@
+import Footer from "@/components/Footer"
 import FreshHotSection from "@/components/FreshHotSection"
 import HeroSlider from "@/components/HeroSlider"
 import LocationsSection from "@/components/LocationsSection"
 import MenuCategorySlider from "@/components/MenuCategorySlider"
 import Navbar from "@/components/Navbar"
 import OrderOnlineBar from "@/components/OrderOnlineBar"
+import PremiumAngusSection from "@/components/PremiumAngusSection"
+import SocialsSection from "@/components/SocialsSection"
 import TestimonialSection from "@/components/TestimonialSection"
 import TurboChargedSection from "@/components/TurboChargedSection"
 
@@ -20,6 +23,9 @@ function Home() {
             <OrderOnlineBar/>
             <FreshHotSection/>
             <TestimonialSection/>
+            <SocialsSection/>
+            <PremiumAngusSection/>
+            <Footer/>
         </div>
     )
 }

@@ -23,8 +23,8 @@ export default function HeroSlider() {
   const getSlide = (offset) => slides[(index + offset + total) % total];
 
   return (
-    <section className="relative w-full bg-white overflow-hidden z-0" style={{ height: "965px" }}>
-      <div className="flex w-full h-full" style={{ gap: "16px", padding: "16px" }}>
+    <section className="relative w-full bg-white overflow-hidden z-0" style={{ height: "875px" }}>
+      <div className="flex w-full h-full" style={{ gap: "14px", padding: "14px" }}>
         {[0, 1, 2].map((offset) => {
           const slide = getSlide(offset);
           const isOverlay = slide.type === "overlay";
