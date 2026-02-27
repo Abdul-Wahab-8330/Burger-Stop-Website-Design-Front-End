@@ -4,16 +4,17 @@ import { useContext } from "react";
 import CheckAuth from "./Authentication/CheckAuth";
 import { AuthContext } from "./context/AuthProvider";
 import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const { isAuthenticated, user } = useContext(AuthContext);
-
 
   return (
     <>
       <Routes>
         {/* Default route */}
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
 
         {/* <Route
           path="/admin"
