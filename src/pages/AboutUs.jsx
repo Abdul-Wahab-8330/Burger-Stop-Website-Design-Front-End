@@ -70,7 +70,7 @@ function AboutUs() {
                         <h2 className="font-medium text-primary uppercase italic leading-none tracking-tight text-[22px] md:text-[40px] lg:text-[65px] xl:text-[80px]">
                             THANK YOU FOR
                         </h2>
-                        <div className='flex gap-5 items-center'>
+                        <div className='flex md:gap-5 gap-3 items-center'>
                             <h2 className="font-medium text-primary uppercase italic  leading-none tracking-tight text-[22px] md:text-[40px] lg:text-[65px] xl:text-[80px]">
                             CHOOSING
                         </h2>
