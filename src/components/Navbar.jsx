@@ -38,7 +38,7 @@ const Navbar = ({ transparent }) => {
   return (
     <>
       <nav className={` ${transparent ? "bg-transparent absolute" : "bg-white pb-6 mt-[-18px] relative"} w-full top-0 left-0 z-50`}>
-        <div className="w-full flex items-center justify-between md:mt-13 mt-8 md:px-18 px-8 py-7">
+        <div className={`w-full flex items-center justify-between ${transparent ? 'md:mt-13 mt-8 py-7' : 'mt-9 md:mt-13 md:py-7' }  md:px-18 px-8`}>
 
           {/* LEFT — Social Icons */}
           <div className="flex items-center md:gap-4 gap-2">
