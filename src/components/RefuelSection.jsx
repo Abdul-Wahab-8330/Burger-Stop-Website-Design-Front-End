@@ -33,14 +33,14 @@ export default function RefuelSection() {
                     {/* Heading: Mix of Host Grotesk and Spatial Black */}
                     <div className="flex flex-col leading-none">
                         <div className="flex items-center">
-                            <h2 className="text-nowrap font-medium uppercase leading-none tracking-tight text-[22px] md:text-[45px] xl:text-[95px] font-light" style={{ transform: 'scaleY(1.1)', transformOrigin: 'left' }}>
+                            <h2 className="text-nowrap font-medium uppercase leading-none tracking-tight text-[22px] md:text-[45px] xl:text-[80px] font-light" style={{ transform: 'scaleY(1.1)', transformOrigin: 'left' }}>
                             READY FOR
                         </h2>
-                        <h2 className=" ml-4 font-spatial-black uppercase leading-none tracking-tight text-[28px] md:text-[55px] xl:text-[95px] font-bold" style={{ transform: 'scaleX(1.1)', transformOrigin: 'left' }}>
+                        <h2 className=" ml-4 font-spatial-black uppercase leading-none tracking-tight text-[28px] md:text-[55px] xl:text-[80px] font-bold" style={{ transform: 'scaleX(1.1)', transformOrigin: 'left' }}>
                             BIG
                         </h2>
                         </div>
-                        <h2 className="font-medium italic uppercase leading-none  text-[28px] md:text-[55px] xl:text-[95px] font-bold" style={{ transform: 'scaleX(1.1)', transformOrigin: 'left' }}>
+                        <h2 className="font-medium italic uppercase leading-none  text-[28px] md:text-[55px] xl:text-[83px] font-bold" style={{ transform: 'scaleX(1.1)', transformOrigin: 'left' }}>
                             FLAVOURS?
                         </h2>
                     </div>
