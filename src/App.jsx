@@ -5,6 +5,9 @@ import CheckAuth from "./Authentication/CheckAuth";
 import { AuthContext } from "./context/AuthProvider";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import Menu from "./pages/Menu";
+import Franchise from "./pages/Franchise";
+import Careers from "./pages/Careers";
 
 function App() {
   const { isAuthenticated, user } = useContext(AuthContext);
@@ -15,6 +18,11 @@ function App() {
         {/* Default route */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/careers" element={<Careers />} />
+
+
 
         {/* <Route
           path="/admin"

@@ -63,3 +63,26 @@ button {
 @media (min-width: 1024px) {
   .slider-panel-hide-mobile { display: block; }
 }
+.burger-title::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  transform: translateY(6px);
+  color: rgba(0, 0, 0, 0.08);
+  z-index: -1;
+  line-height: 0.75;
+  text-align: center;
+  pointer-events: none;
+}
+.reflection {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+}
