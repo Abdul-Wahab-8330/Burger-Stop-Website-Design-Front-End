@@ -37,7 +37,7 @@ function CareersHeroSection() {
                             </p>
 
                             {/* CTA */}
-                            <button
+                            <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer"
                                 className="
     mt-8
     inline-flex
@@ -57,7 +57,7 @@ function CareersHeroSection() {
   "
                             >
                                 APPLY NOW
-                            </button>
+                            </a>
                         </div>
                     </div>
 

@@ -11,6 +11,9 @@ import Careers from "./pages/Careers";
 import Locations from "./pages/Locations";
 import SingleLocation from "./pages/SingleLocation ";
 import News from "./pages/News";
+import SingleNewsPage from "./pages/SingleNewsPage";
+import Order from "./pages/Order";
+import Contact from "./pages/Contact";
 
 function App() {
   const { isAuthenticated, user } = useContext(AuthContext);
@@ -27,6 +30,10 @@ function App() {
         <Route path="/locations" element={<Locations />} />
         <Route path="/locations/:slug" element={<SingleLocation  />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:slug" element={<SingleNewsPage />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/contact" element={<Contact />} />
+
 
 
         {/* <Route

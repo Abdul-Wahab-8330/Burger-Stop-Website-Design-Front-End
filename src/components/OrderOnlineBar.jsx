@@ -52,14 +52,14 @@ export default function OrderOnlineBar({ transparent = false }) {
 
       {/* RIGHT — Logos */}
       <div className="flex items-center justify-center gap-8 md:gap-10 lg:gap-14">
-        <a target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
+        <a href="https://burger-stop-2.deliverectdirect.com/" target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
           <img
             src={currentUberEats}
             alt="UberEats"
             className="object-contain h-7 sm:h-8 md:h-10 lg:h-11"
           />
         </a>
-        <a className="transition-transform active:scale-95">
+        <a href="https://burger-stop-2.deliverectdirect.com/" target="_blank" className="transition-transform active:scale-95">
           <img
             src={currentClickCollect}
             alt="Click + Collect"

@@ -85,9 +85,9 @@ export default function FastLaneSection() {
                             </ul>
 
                             <div>
-                                <button className="bg-secondary text-white font-spatial-black uppercase text-xs px-6 py-3 rounded-full hover:opacity-80 transition">
+                                <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer" className="bg-secondary text-white font-spatial-black uppercase text-xs px-6 py-3 rounded-full hover:opacity-80 transition">
                                     APPLY TODAY
-                                </button>
+                                </a>
                             </div>
                         </div>
 

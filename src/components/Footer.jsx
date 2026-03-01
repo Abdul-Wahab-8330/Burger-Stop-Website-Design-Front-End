@@ -3,6 +3,7 @@ import logo from "../assets/logo-white.png";
 import tiktokWhite from "../assets/tiktok-white.png";
 import facebookWhite from "../assets/facebook-white.png";
 import instagramWhite from "../assets/instagram-white.png";
+import { facebookUrl, instagramUrl, tiktokUrl } from "@/config/constants";
 
 /**
  * Footer Component
@@ -50,9 +51,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-    { name: "TikTok", href: "https://tiktok.com", icon: tiktokWhite },
-    { name: "Facebook", href: "https://facebook.com", icon: facebookWhite },
-    { name: "Instagram", href: "https://instagram.com", icon: instagramWhite },
+    { name: "TikTok", href: tiktokUrl, icon: tiktokWhite },
+    { name: "Facebook", href: facebookUrl, icon: facebookWhite },
+    { name: "Instagram", href: instagramUrl, icon: instagramWhite },
 ];
 
 export default function Footer() {

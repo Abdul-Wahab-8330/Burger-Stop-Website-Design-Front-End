@@ -1,13 +1,17 @@
+import AllergyDownloadModal from '@/components/AllergyDownloadModal'
 import BurgersSection from '@/components/BurgersSection'
 import CategorySlider2 from '@/components/CategorySlider2'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import OrderOnlineBar from '@/components/OrderOnlineBar'
 import TendersSection from '@/components/TendersSection'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Menu() {
+
+    const [showAllergies, setShowAllergies] = useState(false);
+
     return (
         <>
             <Navbar transparent={false} />
@@ -39,7 +43,7 @@ function Menu() {
                         <Link to="/menu" className="bg-transparent text-secondary border border-secondary font-spatial-black text-[10px] md:text-sm px-5 py-2.5 rounded-full uppercase hover:opacity-90 transition-opacity">
                             MENU
                         </Link>
-                        <Link to="/allergies" className="bg-transparent text-secondary border border-secondary font-spatial-black text-[10px] md:text-sm px-5 py-2.5 rounded-full uppercase hover:opacity-90 transition-opacity">
+                        <Link onClick={() => setShowAllergies(true)} className="bg-transparent text-secondary border border-secondary font-spatial-black text-[10px] md:text-sm px-5 py-2.5 rounded-full uppercase hover:opacity-90 transition-opacity">
                             ALLERGIES
                         </Link>
                     </div>
@@ -51,9 +55,12 @@ function Menu() {
                 </Link>
             </section>
 
-            <BurgersSection/>
-            <TendersSection/>
-            <Footer/>
+            <BurgersSection />
+            <TendersSection />
+            <Footer />
+
+            {/* The Modal */}
+            <AllergyDownloadModal isOpen={showAllergies} onClose={() => setShowAllergies(false)} />
 
         </>
     )

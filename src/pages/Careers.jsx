@@ -39,7 +39,7 @@ function Careers() {
 
                     {/* CTA */}
                     <div className="shrink-0 ">
-                        <button
+                        <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer"
                             className="
               bg-secondary
               text-white
@@ -55,7 +55,7 @@ function Careers() {
             "
                         >
                             APPLY NOW
-                        </button>
+                        </a>
                     </div>
 
                 </div>

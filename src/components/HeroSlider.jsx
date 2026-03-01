@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 import slide1 from "../assets/hero-slide-1.png";
 import slide2 from "../assets/hero-slide-2.png";
@@ -11,17 +12,28 @@ const slides = [
   { id: 2, image: slide2, text: "MENU", subtext: "", type: "solid" },
   { id: 3, image: slide3, text: "LOCATE", subtext: "", type: "overlay" },
 ];
+const AUTO_DELAY = 8500;
+
 
 export default function HeroSlider() {
+
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const total = slides.length;
 
   const prev = () => { setDirection(-1); setIndex((i) => (i - 1 + total) % total); };
-  const next = () => { setDirection(1);  setIndex((i) => (i + 1) % total); };
+  const next = () => { setDirection(1); setIndex((i) => (i + 1) % total); };
 
-  
   const getSlide = (offset) => slides[(index + offset + total) % total];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDirection(1);
+      setIndex((i) => (i + 1) % total);
+    }, AUTO_DELAY);
+
+    return () => clearTimeout(timer);
+  }, [index]);
 
   return (
     <section className="relative w-full bg-white overflow-hidden z-0 h-[100vh] md:h-[875px]">
@@ -43,10 +55,11 @@ export default function HeroSlider() {
                   key={slide.id + "-" + offset}
                   className="absolute inset-0 w-full h-full"
                   custom={direction}
-                  initial={{ opacity: 0, x: direction * 60 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: direction * -30 }}
-                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  initial={{ opacity: 0, x: direction * 40, scale: 0.98 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: direction * -20, scale: 1.02 }}
+                  transition={{ duration: 0.65, ease: [0.65, 0, 0.35, 1] }}
+
                 >
                   {/* Image */}
                   <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-all duration-300 object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
@@ -76,13 +89,13 @@ export default function HeroSlider() {
       </div>
 
       {/* Left Arrow */}
-      <button onClick={prev} aria-label="Previous" className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-20 h-20 flex items-center justify-center rounded-full transition-all">
-        <ChevronUp size={75} color="#fff" strokeWidth={1.2} style={{ transform: "rotate(-90deg)" }} />
+      <button onClick={prev} aria-label="Previous" className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-20 h-20 flex items-center justify-center rounded-full  transition-all">
+        <ChevronUp className="hover:scale-110 transition-transform duration-250" size={75} color="#fff" strokeWidth={1.2} style={{ transform: "rotate(-90deg)" }} />
       </button>
 
       {/* Right Arrow */}
       <button onClick={next} aria-label="Next" className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-20 h-20 flex items-center justify-center rounded-full transition-all">
-        <ChevronUp size={75} color="#fff" strokeWidth={1.2} style={{ transform: "rotate(90deg)" }} />
+        <ChevronUp className="hover:scale-110 transition-transform duration-250" size={75} color="#fff" strokeWidth={1.2} style={{ transform: "rotate(90deg)" }} />
       </button>
     </section>
   );

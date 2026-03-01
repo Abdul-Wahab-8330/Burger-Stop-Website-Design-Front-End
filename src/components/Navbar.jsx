@@ -12,6 +12,7 @@ import facebookBlack from "../assets/facebook-black.png";
 import instagramBlack from "../assets/instagram-black.png";
 import menuicon from "../assets/menu-icon.png";
 import menuiconblack from "../assets/menu-icon-black.png";
+import { facebookUrl, instagramUrl, tiktokUrl } from "@/config/constants";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -26,9 +27,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "FACEBOOK", href: "https://facebook.com", iconWhite: facebookWhite, iconBlack: facebookBlack },
-  { name: "INSTAGRAM", href: "https://instagram.com", iconWhite: instagramWhite, iconBlack: instagramBlack },
-  { name: "TIKTOK", href: "https://tiktok.com", iconWhite: tiktokWhite, iconBlack: tiktokBlack },
+  { name: "FACEBOOK", href: facebookUrl, iconWhite: facebookWhite, iconBlack: facebookBlack },
+  { name: "INSTAGRAM", href: instagramUrl, iconWhite: instagramWhite, iconBlack: instagramBlack },
+  { name: "TIKTOK", href: tiktokUrl, iconWhite: tiktokWhite, iconBlack: tiktokBlack },
 ];
 
 const Navbar = ({ transparent }) => {
@@ -66,7 +67,7 @@ const Navbar = ({ transparent }) => {
               <img
                 src={logo}
                 alt="Burger Stop"
-                className="object-contain w-31.5 h-auto md:w-60 lg:w-75.5 lg:h-25.25"
+                className="object-contain w-31.5 h-auto md:w-60 lg:w-75.5 lg:h-25.25 hover:scale-105 transition-transform duration-250  "
               />
             </Link>
           </div>
@@ -85,9 +86,9 @@ const Navbar = ({ transparent }) => {
             >
               {
                 transparent ? (
-                  <img src={menuicon} className="md:h-8 md:w-14 h-4 w-7" alt="Menu" />
+                  <img src={menuicon} className="md:h-8 md:w-14 h-4 w-7 hover:opacity-70 duration-250" alt="Menu" />
                 ) : (
-                  <img src={menuiconblack} className="md:h-8 md:w-14 h-4 w-7" alt="Menu" />
+                  <img src={menuiconblack} className="md:h-8 md:w-14 h-4 w-7 hover:opacity-70 duration-250" alt="Menu" />
                 )
               }
             </motion.button>
@@ -138,7 +139,7 @@ const Navbar = ({ transparent }) => {
                 {/* Logo at top of sidebar */}
                 <div className="px-10 md:px-12 pt-10 pb-6 border-b border-black/10 flex items-center justify-between">
                   <Link to="/" onClick={() => setMenuOpen(false)}>
-                    <img src={logo} alt="Burger Stop" className="w-36 md:w-44 h-auto object-contain" />
+                    <img src={logo} alt="Burger Stop" className="w-36 md:w-44 h-auto object-contain hover:scale-105 transition-transform duration-250" />
                   </Link>
                   <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="transition-opacity hover:opacity-60">
                     <X size={30} color="#1E1E1C" strokeWidth={2} />
