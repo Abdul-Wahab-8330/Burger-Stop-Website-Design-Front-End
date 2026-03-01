@@ -1,11 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { ChevronUp } from "lucide-react";
 
-import location1 from "../assets/location-sale.png";
-import location2 from "../assets/location-salford.png";
-import location3 from "../assets/location-manchester.png";
-import location4 from "../assets/location-liverpool.png";
 import { Link } from "react-router-dom";
+import { locations } from "@/config/constants";
 
 /**
  * LocationsSection
@@ -17,43 +14,8 @@ import { Link } from "react-router-dom";
  * - Maps from array — add more locations easily
  */
 
-const locations = [
-    {
-        id: 1,
-        image: location1,
-        name: "SALE",
-        type: "normal",
-        isMobileSpecial: true,
-        comingSoon: false,
-        slug: "sale", // for linking to individual location page in future
-    },
-    {
-        id: 2,
-        image: location2,
-        name: "SALFORD",
-        type: "special", // has LETS GO! GO! GO! box
-        comingSoon: false,
-        slug: "salford",
-    },
-    {
-        id: 3,
-        image: location3,
-        name: "MANCHESTER\nCITY CENTRE",
-        type: "normal",
-        comingSoon: false,
-        slug: "manchester-city-centre",
-    },
-    {
-        id: 4,
-        image: location4,
-        name: "LIVERPOOL\nCOMING SOON",
-        type: "normal",
-        comingSoon: true,
-        slug: "liverpool"
-    },
-];
+export default function LocationsSection({ heading = 'true' }) {
 
-export default function LocationsSection() {
     const scrollRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
@@ -85,12 +47,16 @@ export default function LocationsSection() {
         <section className="w-full bg-white pt-4 md:py-8 py-4">
 
             {/* Heading */}
-            <div className="px-5 md:px-7 lg:px-9 mb-2 mt-3">
-                <h2 className="font-compact-medium font-extrabold text-secondary uppercase text-3xl md:text-4xl lg:text-5xl">
-                    LOCATIONS TO{" "}
-                    <span className="font-spatial-black text-3xl md:text-4xl lg:text-5xl">REFUEL</span>
-                </h2>
-            </div>
+            {
+                heading ? (
+                    <div className="px-5 md:px-7 lg:px-9 mb-2 mt-3">
+                        <h2 className="font-compact-medium font-extrabold text-secondary uppercase text-3xl md:text-4xl lg:text-5xl">
+                            LOCATIONS TO{" "}
+                            <span className="font-spatial-black text-3xl md:text-4xl lg:text-5xl">REFUEL</span>
+                        </h2>
+                    </div>
+                ) : null
+            }
 
             {/* Cards wrapper — relative for arrows */}
             <div className="relative px-0">
@@ -140,7 +106,7 @@ function LocationCard({ location }) {
     const isMobileSpecial = location.isMobileSpecial;
 
     return (
-        <Link>
+        <Link to={location.comingSoon ? "#" : `/locations/${location.slug}`}>
             <div
                 className="relative shrink-0 overflow-hidden cursor-pointer group"
                 style={{ width: "400px", height: "490px", borderRadius: "5px" }}
@@ -246,6 +212,26 @@ function LocationCard({ location }) {
                         {location.name}
                     </span>
                 </div>
+
+                {location.subtitle == 'COMING SOON' && (
+                    <div className="absolute inset-0 flex items-center justify-start pointer-events-none">
+                        <span
+                            className="font-spatial-black uppercase text-white opacity-[0.52]"
+                            style={{
+                                fontSize: "64px",
+                                letterSpacing: "2px",
+                                writingMode: "vertical-rl",
+                                transform: "rotate(180deg)",
+                                marginLeft: "130px",
+                                marginBottom: "30px",
+                                lineHeight: "0.9",
+                                textAlign: "center"
+                            }}
+                        >
+                            COMING SOON
+                        </span>
+                    </div>
+                )}
 
             </div>
         </Link>

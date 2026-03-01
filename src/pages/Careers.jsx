@@ -64,7 +64,7 @@ function Careers() {
             <FastLaneSection />
 
             <section className="w-full bg-secondary">
-                <div className="max-w-7xl mx-auto px-10 py-8 md:py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+                <div className="max-w-7xl mx-auto px-4  py-8 md:py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
                     {/* TEXT BLOCK */}
                     <h2 className="uppercase leading-[0.7]">

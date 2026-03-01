@@ -8,6 +8,9 @@ import AboutUs from "./pages/AboutUs";
 import Menu from "./pages/Menu";
 import Franchise from "./pages/Franchise";
 import Careers from "./pages/Careers";
+import Locations from "./pages/Locations";
+import SingleLocation from "./pages/SingleLocation ";
+import News from "./pages/News";
 
 function App() {
   const { isAuthenticated, user } = useContext(AuthContext);
@@ -21,7 +24,9 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/franchise" element={<Franchise />} />
         <Route path="/careers" element={<Careers />} />
-
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/locations/:slug" element={<SingleLocation  />} />
+        <Route path="/news" element={<News />} />
 
 
         {/* <Route
