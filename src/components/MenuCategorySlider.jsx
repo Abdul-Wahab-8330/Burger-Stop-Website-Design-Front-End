@@ -7,6 +7,7 @@ import burger2 from "../assets/burger-kansas-original.png";
 import burger3 from "../assets/burger-double-angus.png";
 import burger4 from "../assets/burger-chicken-classic.png";
 import burger5 from "../assets/burger-double-classic.png";
+import { Link } from "react-router-dom";
 
 /**
  * MenuCategorySlider
@@ -72,13 +73,13 @@ export default function MenuCategorySlider() {
                         </button>
                     ))}
                 </div>
-                <a
+                <Link to="/menu"
 
                     className="font-compact-black cursor-pointer text-md md:text-lg tracking-normal whitespace-nowrap ml-6 transition-opacity hover:opacity-70"
                     style={{ color: "#00B4C5" }}
                 >
                     VIEW OUR MENU
-                </a>
+                </Link>
             </div>
 
             {/* Cards Row with arrows */}
