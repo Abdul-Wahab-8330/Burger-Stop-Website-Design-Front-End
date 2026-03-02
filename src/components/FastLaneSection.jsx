@@ -1,6 +1,7 @@
 import fastLaneSticker from "../assets/fast-lane-sticker.png";
 import lightningIcon from "../assets/lightning.png";
 import fastLaneImg from "../assets/fastlane-image.png";
+import { careerUrl } from "@/config/constants";
 
 export default function FastLaneSection() {
     return (
@@ -85,7 +86,7 @@ export default function FastLaneSection() {
                             </ul>
 
                             <div>
-                                <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer" className="bg-secondary text-white font-spatial-black uppercase text-xs px-6 py-3 rounded-full hover:opacity-80 transition">
+                                <a href={careerUrl} target="_blank" rel="noopener noreferrer" className="bg-secondary text-white font-spatial-black uppercase text-xs px-6 py-3 rounded-full hover:opacity-80 transition">
                                     APPLY TODAY
                                 </a>
                             </div>

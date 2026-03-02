@@ -6,11 +6,12 @@ import { useEffect } from "react";
 import slide1 from "../assets/hero-slide-1.png";
 import slide2 from "../assets/hero-slide-2.png";
 import slide3 from "../assets/hero-slide-3.png";
+import { Link } from "react-router-dom";
 
 const slides = [
-  { id: 1, image: slide1, text: "ORDER", subtext: "", type: "overlay" },
-  { id: 2, image: slide2, text: "MENU", subtext: "", type: "solid" },
-  { id: 3, image: slide3, text: "LOCATE", subtext: "", type: "overlay" },
+  { id: 1, image: slide1, text: "ORDER", subtext: "", type: "overlay", link:"/order" },
+  { id: 2, image: slide2, text: "MENU", subtext: "", type: "solid", link:"/menu" },
+  { id: 3, image: slide3, text: "LOCATE", subtext: "", type: "overlay" , link:"/locations" },
 ];
 const AUTO_DELAY = 8500;
 
@@ -42,48 +43,50 @@ export default function HeroSlider() {
           const slide = getSlide(offset);
           const isOverlay = slide.type === "overlay";
           return (
-            <div
-              key={offset}
-              className={`relative flex-1 h-full group overflow-hidden
+            
+              <Link to={slide.link}
+                key={offset}
+                className={`relative flex-1 h-full group overflow-hidden
                 ${offset === 1 ? "slider-panel-hide-tablet" : ""}
                 ${offset === 2 ? "slider-panel-hide-mobile" : ""}
               `}
-              style={{ borderRadius: "17px" }}
-            >
-              <AnimatePresence mode="popLayout" custom={direction}>
-                <motion.div
-                  key={slide.id + "-" + offset}
-                  className="absolute inset-0 w-full h-full"
-                  custom={direction}
-                  initial={{ opacity: 0, x: direction * 40, scale: 0.98 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  exit={{ opacity: 0, x: direction * -20, scale: 1.02 }}
-                  transition={{ duration: 0.65, ease: [0.65, 0, 0.35, 1] }}
+                style={{ borderRadius: "17px" }}
+              >
+                <AnimatePresence mode="popLayout" custom={direction}>
+                  <motion.div
+                    key={slide.id + "-" + offset}
+                    className="absolute inset-0 w-full h-full"
+                    custom={direction}
+                    initial={{ opacity: 0, x: direction * 40, scale: 0.98 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: direction * -20, scale: 1.02 }}
+                    transition={{ duration: 0.65, ease: [0.65, 0, 0.35, 1] }}
 
-                >
-                  {/* Image */}
-                  <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-all duration-300 object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
+                  >
+                    {/* Image */}
+                    <img src={slide.image} alt={slide.text} className="absolute inset-0 w-full h-full group-hover:scale-105 transition-all duration-300 object-cover" style={{ filter: !isOverlay ? "brightness(1) saturate(1)" : "none" }} />
 
-                  {/* Teal overlay */}
-                  {isOverlay && <div className="absolute inset-0" style={{ backgroundColor: "#00B4C5", mixBlendMode: "multiply" }} />}
+                    {/* Teal overlay */}
+                    {isOverlay && <div className="absolute inset-0" style={{ backgroundColor: "#00B4C5", mixBlendMode: "multiply" }} />}
 
-                  {/* Dark overlay for solid */}
-                  {!isOverlay && <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)", mixBlendMode: "multiply" }} />}
+                    {/* Dark overlay for solid */}
+                    {!isOverlay && <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)", mixBlendMode: "multiply" }} />}
 
-                  {/* Text */}
-                  <div className="absolute inset-0 flex flex-col items-start left-0 justify-end gap-2 pb-9">
-                    <span className="font-spatial-black cursor-pointer uppercase text-center" style={{ fontSize: isOverlay ? "84px" : "120px", letterSpacing: "2px", color: isOverlay ? "transparent" : "#ffffff", WebkitTextStroke: isOverlay ? "2px #ffffff" : "4px #ffffff", textAlign: "left", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
-                      {slide.text}
-                    </span>
-                    {/* {slide.subtext && (
+                    {/* Text */}
+                    <div className="absolute inset-0 flex flex-col items-start left-0 justify-end gap-2 pb-9">
+                      <span className="font-spatial-black cursor-pointer uppercase text-center" style={{ fontSize: isOverlay ? "84px" : "120px", letterSpacing: "2px", color: isOverlay ? "transparent" : "#ffffff", WebkitTextStroke: isOverlay ? "2px #ffffff" : "4px #ffffff", textAlign: "left", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
+                        {slide.text}
+                      </span>
+                      {/* {slide.subtext && (
                       <span className="font-spatial-black uppercase text-center" style={{ fontSize: "clamp(48px, 6vw, 104px)", letterSpacing: "6px", color: isOverlay ? "transparent" : "#fff", WebkitTextStroke: isOverlay ? "2px #fff" : "none" }}>
                         {slide.subtext}
                       </span>
                     )} */}
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </Link>
+            
           );
         })}
       </div>

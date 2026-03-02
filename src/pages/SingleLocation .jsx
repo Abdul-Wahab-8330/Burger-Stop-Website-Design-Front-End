@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import OrderOnlineBar from '@/components/OrderOnlineBar'
-import { locations } from '@/config/constants'
+import { clickCollectUrl, locations, uberEatsUrl } from '@/config/constants'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ubereatslogo from '../assets/ubereats-black-green.png'
@@ -89,10 +89,10 @@ function SingleLocation() {
 
                     {/* Logos */}
                     <div className="flex items-center gap-8 mt-8">
-                        <a href="https://burger-stop-2.deliverectdirect.com/" target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
+                        <a href={location.orderLinks.uberEats} target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
                             <img src={ubereatslogo} alt="Uber Eats" className="h-6 md:h-8" />
                         </a>
-                        <a href="https://burger-stop-2.deliverectdirect.com/" target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
+                        <a href={location.orderLinks.clickCollect} target="_blank" rel="noopener noreferrer" className="transition-transform active:scale-95">
                             <img src={clickcollectlogo} alt="Click + Collect" className="h-6 md:h-8" />
                         </a>
                     </div>

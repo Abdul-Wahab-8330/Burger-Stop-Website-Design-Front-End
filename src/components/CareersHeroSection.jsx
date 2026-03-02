@@ -1,5 +1,6 @@
 import React from 'react'
 import igniteImg from "../assets/ignite-future.png"; // ← your imported image
+import { careerUrl } from '@/config/constants';
 
 
 function CareersHeroSection() {
@@ -37,7 +38,7 @@ function CareersHeroSection() {
                             </p>
 
                             {/* CTA */}
-                            <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer"
+                            <a href={careerUrl} target="_blank" rel="noopener noreferrer"
                                 className="
     mt-8
     inline-flex

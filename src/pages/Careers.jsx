@@ -3,6 +3,7 @@ import FastLaneSection from '@/components/FastLaneSection'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import PitStopCareers from '@/components/PitStopCareers'
+import { careerUrl } from '@/config/constants'
 import React from 'react'
 
 function Careers() {
@@ -39,7 +40,7 @@ function Careers() {
 
                     {/* CTA */}
                     <div className="shrink-0 ">
-                        <a href="https://burgerstop.co.uk/careers/" target="_blank" rel="noopener noreferrer"
+                        <a href={careerUrl} target="_blank" rel="noopener noreferrer"
                             className="
               bg-secondary
               text-white

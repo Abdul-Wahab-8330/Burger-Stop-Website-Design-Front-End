@@ -24,11 +24,12 @@ export default function FranchiseIgniteSection() {
 
             {/* Body */}
             <p className="font-medium text-sm md:text-base leading-relaxed mt-6 max-w-md opacity-90">
-              Ready to run your own business… lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Ready to take the next step in your business journey?
+              Burger Stop offers a proven concept built around quality, consistency, and community.
+
+              Our franchise model is designed to support ambitious partners with clear systems, strong branding, and ongoing guidance, giving you the confidence to focus on growing your own successful location.
+
+              If you’re passionate about great food and great service, this could be the opportunity you’ve been looking for.
             </p>
 
             {/* CTA */}

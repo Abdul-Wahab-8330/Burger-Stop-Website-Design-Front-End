@@ -3,7 +3,7 @@ import logo from "../assets/logo-white.png";
 import tiktokWhite from "../assets/tiktok-white.png";
 import facebookWhite from "../assets/facebook-white.png";
 import instagramWhite from "../assets/instagram-white.png";
-import { facebookUrl, instagramUrl, tiktokUrl } from "@/config/constants";
+import { careerUrl, facebookUrl, instagramUrl, tiktokUrl } from "@/config/constants";
 
 /**
  * Footer Component
@@ -20,16 +20,16 @@ const footerLinks = {
         links: [
             { label: "Contact Us", href: "/contact" },
             { label: "About Us", href: "/about" },
-            { label: "Blog", href: "/blog" },
+            { label: "Blog", href: "news" },
         ],
     },
     menu: {
         title: "MENU",
         links: [
-            { label: "Order Online", href: "#" },
-            { label: "Our Food", href: "#" },
-            { label: "Limited Range", href: "#" },
-            { label: "Gallery", href: "#" },
+            { label: "Order Online", href: "/menu" },
+            { label: "Our Food", href: "/menu" },
+            { label: "Limited Range", href: "/menu" },
+            { label: "Gallery", href: "/menu" },
         ],
     },
     locations: {
@@ -43,8 +43,8 @@ const footerLinks = {
     careers: {
         title: "CAREERS",
         links: [
-            { label: "How To Apply", href: "#" },
-            { label: "Become A Franchisee", href: "#" },
+            { label: "How To Apply", href: careerUrl },
+            { label: "Become A Franchisee", href: "/franchise" },
             { label: "Contact Us", href: "/contact" },
         ],
     },

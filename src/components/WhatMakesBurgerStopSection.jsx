@@ -19,7 +19,7 @@ export default function WhatMakesBurgerStopSection() {
 
           {/* Heading */}
           <h2 className="uppercase leading-[1.1] mb-6">
-            <span className="block font-medium italic text-[35px] md:text-[45px]" style={{transform:'scaleY(1.2)'}}>
+            <span className="block font-medium italic text-[35px] md:text-[45px]" style={{ transform: 'scaleY(1.2)' }}>
               WHAT MAKES
             </span>
 
@@ -27,21 +27,19 @@ export default function WhatMakesBurgerStopSection() {
               BURGER STOP
             </span>
 
-            <span className="block font-medium mt-1 md:mt-0 text-[35px] md:text-[44px]" style={{transform:'scaleY(1.1)'}}>
+            <span className="block font-medium mt-1 md:mt-0 text-[35px] md:text-[44px]" style={{ transform: 'scaleY(1.1)' }}>
               DIFFERENT FROM THE REST?
             </span>
           </h2>
 
           {/* Body */}
           <p className="font-medium text-sm md:text-base leading-relaxed w-full opacity-90">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            At Burger Stop, everything starts with a focus on quality and consistency.
+            From our ingredients to our in-store experience, we aim to deliver food that’s made with care and served with confidence.
+
+            Our approach blends bold branding with simple, well-defined processes, allowing every location to maintain the same high standards while still feeling welcoming and local.
+
+            It’s this balance, attention to detail, strong identity, and everyday reliability, that sets Burger Stop apart.
           </p>
 
           {/* CTA */}

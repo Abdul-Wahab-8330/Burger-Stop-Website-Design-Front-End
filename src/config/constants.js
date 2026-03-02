@@ -10,9 +10,9 @@ export const facebookUrl = "https://www.facebook.com/burgerstopuk/";
 export const instagramUrl = "https://www.instagram.com/burgerstopuk?igshid=YmMyMTA2M2Y%3D";
 export const tiktokUrl = "https://www.tiktok.com/@burgerstopuk";
 
-export const careerUrl = "https://burgerstop.co.uk/careers/"
-export const uberEatsUrl = "https://burger-stop-2.deliverectdirect.com/"
-export const clickCollectUrl = "https://burger-stop-2.deliverectdirect.com/"
+export const careerUrl = "https://burgerstop.co.uk/careers"
+export const uberEatsUrl = "https://burger-stop-2.deliverectdirect.com"
+export const clickCollectUrl = "https://burger-stop-2.deliverectdirect.com"
 
 export const locations = [
     {
@@ -28,8 +28,8 @@ export const locations = [
         isMobileSpecial: true,
         comingSoon: false,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-sale`,
+            clickCollect: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-sale`,
         },
         slug: "sale",
     },
@@ -45,8 +45,8 @@ export const locations = [
         type: "special",
         comingSoon: false,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-salford`,
+            clickCollect: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-salford`,
         },
         slug: "salford",
     },
@@ -62,8 +62,8 @@ export const locations = [
         type: "normal",
         comingSoon: false,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-manchester`,
+            clickCollect: `https://burger-stop-2.deliverectdirect.com/pickup/burger-stop-manchester`,
         },
         slug: "manchester-city-centre",
     },
@@ -79,8 +79,8 @@ export const locations = [
         type: "normal",
         comingSoon: true,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: "https://burger-stop-2.deliverectdirect.com",
+            clickCollect: "https://burger-stop-2.deliverectdirect.com",
         },
         slug: "liverpool",
     },
@@ -96,8 +96,8 @@ export const locations = [
         type: "normal",
         comingSoon: true,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: "https://burger-stop-2.deliverectdirect.com",
+            clickCollect: "https://burger-stop-2.deliverectdirect.com",
         },
         slug: "newcastle",
     },
@@ -113,8 +113,8 @@ export const locations = [
         type: "normal",
         comingSoon: true,
         orderLinks: {
-            uberEats: uberEatsUrl,
-            clickCollect: clickCollectUrl,
+            uberEats: "https://burger-stop-2.deliverectdirect.com",
+            clickCollect: "https://burger-stop-2.deliverectdirect.com",
         },
         slug: "london",
     },

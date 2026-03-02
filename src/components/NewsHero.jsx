@@ -43,7 +43,8 @@ function NewsHero() {
 
                     {/* DATE — now tied to headline */}
                     <span className="block font-compact-black text-sm tracking-widest uppercase mb-2 opacity-90">
-                        SEPT 25
+                        {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
+
                     </span>
 
                     {/* HEADLINE */}
